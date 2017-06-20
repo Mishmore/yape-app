@@ -13,8 +13,6 @@ const RegisterNum = (update) => {
   const validateNum = () => {
     if( (/^\d{9}$/.test(inputNum.val())) && (($('#agree').prop('checked')) == true) ) {
       btnContinuar.prop('disabled', false);
-      //console.log('ok');
-      //console.log($('#agree').prop('checked'));
     } else {
       btnContinuar.prop('disabled', true);
     }
@@ -30,16 +28,17 @@ const RegisterNum = (update) => {
 
   btnContinuar.on('click', (e) => {
     const phone = inputNum.val();
-    //alert('listo para enviar data');
     $.post( 'api/registerNumber', { phone: phone, terms: true },
       function(response){
-        userData.phone = response.data.phone;
-        userData.code = response.data.code;
+        if (response.data == null) {
+          alert('Este usuario ya existe');
+        } else {
+          userData.phone = response.data.phone;
+          userData.code = response.data.code;
+          state.selectedScreen = 'enterCode';
+          update();
+        }
       }, 'json' )
-    .done(function() {
-      state.selectedScreen = 'enterCode';
-      update();
-    });
   })
 
   parent.append(title);
