@@ -10,6 +10,9 @@ const render = (root) => {
   if (state.selectedScreen == 'regNumber') {
     wrapper.append(RegisterNum(_ => render(root)));
   }
+  if (state.selectedScreen == 'enterCode') {
+    wrapper.append(EnterCode(_ => render(root)));
+  }
 
 }
 

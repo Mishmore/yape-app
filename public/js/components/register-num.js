@@ -32,9 +32,14 @@ const RegisterNum = (update) => {
     const phone = inputNum.val();
     //alert('listo para enviar data');
     $.post( 'api/registerNumber', { phone: phone, terms: true },
-    function(response){
-      console.log(response.data.code);
-    }, 'json' );
+      function(response){
+        console.log(response);
+        console.log(response.data.code);
+      }, 'json' )
+    .done(function() {
+      state.selectedScreen = 'enterCode';
+      update();
+    });
   })
 
   parent.append(title);
