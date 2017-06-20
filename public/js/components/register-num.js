@@ -28,6 +28,15 @@ const RegisterNum = (update) => {
     validateNum();
   });
 
+  btnContinuar.on('click', (e) => {
+    const phone = inputNum.val();
+    //alert('listo para enviar data');
+    $.post( 'api/registerNumber', { phone: phone, terms: true },
+    function(){
+      alert('data sent');
+    }, 'json' );
+  })
+
   parent.append(title);
   parent.append(p);
   parent.append(form);
