@@ -18,8 +18,20 @@ const render = (root) => {
 
 const state = {
   jsonlist: null,
-  selectedScreen : null
+  selectedScreen : null,
 }
+
+const userData = {
+  phone: null,
+  code: null,
+  username: null,
+  email: null,
+  password: null,
+  cardNum: null,
+  cardExp: null,
+  cardPassword: null
+}
+
 
 $(_ => {
   $.get( "api", function(data) {

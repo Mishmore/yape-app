@@ -33,8 +33,8 @@ const RegisterNum = (update) => {
     //alert('listo para enviar data');
     $.post( 'api/registerNumber', { phone: phone, terms: true },
       function(response){
-        console.log(response);
-        console.log(response.data.code);
+        userData.phone = response.data.phone;
+        userData.code = response.data.code;
       }, 'json' )
     .done(function() {
       state.selectedScreen = 'enterCode';
