@@ -2,8 +2,8 @@
 
 const RegisterNum = (update) => {
   const parent = $('<div></div>');
-  const title = $('<h4>Para comenzar validaremos tu número</h4>');
-  const p = $('Recibirás un SMS con un código de validación');
+  const title = $('<h4 class="text-center">Para comenzar validaremos tu número</h4>');
+  const p = $('<p class="text-center">Recibirás un SMS con un código de validación</p>');
   const form = $('<form onsubmit="return false"></form>');
   const inputNum = $('<input type="number">');
   const checkbox = $('<input type="checkbox" id="agree"> Acepto los <a href="#">Términos y condiciones</a>');

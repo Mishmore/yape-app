@@ -1,0 +1,41 @@
+/*
+Rojo - bullet : #f64552
+Gris - bullet : #f8f8f8
+yellow : #fbd43b
+Gris dark : #212121
+Gris - letra soft : #8f8f8f
+Turquesa - Términos y condiciones: #00c3a3
+Morado - Entrada de números : #49233b
+Morado light : #451e36
+Morado dark : #38052a
+*/
+body,h1,h2,h3,h4,h5,h6,span,input,label,small, button{
+  font-family: 'Roboto' !important;
+}
+
+.white-text {
+  color: #fff;
+}
+
+p,
+.grey-soft-text {
+  color: #8f8f8f;
+  font-size: 1.5rem;
+}
+
+.welcome p {
+  width: 90%;
+  margin: auto;
+}
+
+.grey-dark-text {
+  color: #212121;
+}
+
+.yellow {
+  background-color: #fbd43b;
+}
+
+.carousel-slider {
+    height: 400px !important;
+}
