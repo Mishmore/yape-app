@@ -6,16 +6,17 @@ const RegisterNum = (update) => {
   const p = $('Recibirás un SMS con un código de validación');
   const form = $('<form onsubmit="return false"></form>');
   const inputNum = $('<input type="number">');
-  const checkbox = $('<input type="checkbox"> Acepto los <a href="#">Términos y condiciones</a>');
+  const checkbox = $('<input type="checkbox" id="agree"> Acepto los <a href="#">Términos y condiciones</a>');
   const btnContinuar = $('<button type="submit">CONTINUAR</button>');
   btnContinuar.prop('disabled', true);
 
   const validateNum = () => {
-    if( (/^\d{9}$/.test(inputNum.val())) ) {
+    if( (/^\d{9}$/.test(inputNum.val())) && (($('#agree').prop('checked')) == true) ) {
       btnContinuar.prop('disabled', false);
-      console.log('ok');
+      //console.log('ok');
+      //console.log($('#agree').prop('checked'));
     } else {
-      console.log('wrong');
+      btnContinuar.prop('disabled', true);
     }
   }
 
