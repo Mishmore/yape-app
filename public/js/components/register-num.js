@@ -32,8 +32,8 @@ const RegisterNum = (update) => {
     const phone = inputNum.val();
     //alert('listo para enviar data');
     $.post( 'api/registerNumber', { phone: phone, terms: true },
-    function(){
-      alert('data sent');
+    function(response){
+      console.log(response.data.code);
     }, 'json' );
   })
 
