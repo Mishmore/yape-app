@@ -13,7 +13,9 @@ const render = (root) => {
   if (state.selectedScreen == 'enterCode') {
     wrapper.append(EnterCode(_ => render(root)));
   }
-
+  if (state.selectedScreen == 'createUser') {
+    wrapper.append(CreateUser(_ => render(root)));
+  }
 }
 
 const state = {
