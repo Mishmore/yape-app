@@ -1,5 +1,6 @@
 $(function(){
   $('.carousel').carousel({
-    full_width: true
+    fullWidth: true
   });
+
  });
