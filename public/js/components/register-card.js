@@ -10,12 +10,15 @@ const RegisterCard = (update) => {
   const form = $('<form onsubmit="return false" class="form relative margin-top"></form>');
   const icon = $('<img src="img/icons/card.png" class="field-icon">');
   const inputCard = $('<input type="number" class="center-align">');
-  const scanDiv = $('<div></div>');
-  const scan = $('<img src="img/icons/scan.png">');
-  const scantxt = $('<p class="center-align light-turquoise">Escanear tarjeta</p>');
+  const scanDiv = $('<div class="scan-div"></div>');
+  const scan = $('<img src="img/icons/scan.png" width="25px">');
+  const scantxt = $('<p class="center-align light-turquoise inline-block">Escanear tarjeta</p>');
+  const venceDiv = $('<div class="vence-div"></div>');
+  const fieldDiv = $('<div class="vence-field"></div>');
   const vence = $('<span class="grey-soft-text">Fecha de vencimiento</span>');
-  const inputMonth = $('<input type="number" min="1" max="12">');
-  const inputYear = $('<input type="number" min="17" max="24">');
+  const inputMonth = $('<input type="number" min="1" max="12" placeholder="Mes" class="small-input center-align">');
+  const slash = $('<span>/</span>');
+  const inputYear = $('<input type="number" min="17" max="24" placeholder="Año" class="small-input center-align">');
   const btnContinuar = $('<button type="submit" class="btn margin-auto yellow margin-top">CONTINUAR</button>');
   btnContinuar.prop('disabled', true);
 
@@ -50,9 +53,12 @@ const RegisterCard = (update) => {
   form.append(scanDiv);
   scanDiv.append(scan);
   scanDiv.append(scantxt);
-  form.append(vence);
-  form.append(inputMonth);
-  form.append(inputYear);
+  form.append(venceDiv);
+  venceDiv.append(vence);
+  venceDiv.append(fieldDiv);
+  fieldDiv.append(inputMonth);
+  fieldDiv.append(slash);
+  fieldDiv.append(inputYear);
   form.append(btnContinuar);
 
   return parent;

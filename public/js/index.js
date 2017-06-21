@@ -29,7 +29,7 @@ const render = (root) => {
 }
 
 const state = {
-  selectedScreen : null
+  selectedScreen : 'RegisterCard'
 }
 
 const userData = {

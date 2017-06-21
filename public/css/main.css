@@ -23,6 +23,10 @@ h6 {
   width: 100%;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .btn {
   box-shadow: none;
 }
@@ -36,7 +40,7 @@ h6 {
 }
 
 .margin-top {
-  margin-top: 60px;
+  margin-top: 55px;
 }
 
 .relative {
@@ -175,4 +179,27 @@ input[type="password"]:focus:not([readonly])
 .success h6 {
   margin: 0.7rem 0 .4rem 0;
   line-height: 20px;
+}
+
+.small-input {
+  width: 50px !important;
+  margin: 0 3px !important;
+}
+
+.form .scan-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.form .vence-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.form .scan-div p {
+  margin: 0 0 0 5px;
 }
