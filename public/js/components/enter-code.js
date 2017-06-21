@@ -13,7 +13,24 @@ const EnterCode = (update) => {
   const timeDiv = $('<div class="margin-auto timer-div"></div>');
   const subtext = $('<small>Reintentar en </small>');
   const clock = $('<img src="img/icons/clock.png" alt="clock" class="inline-block clock">');
-  const timer = $('<small>21</small>');
+  let sec = 21;
+  const timer = $('<small id="time">'+ sec +'</small>');
+
+  $(_ => {
+
+  });
+
+  const intervalTimer = setInterval(function() {
+    countdown();
+  }, 1000);
+
+  function countdown() {
+    $("#time").text(sec);
+    sec--;
+    if (sec < 0) {
+      sec = 21;
+    }
+  }
 
   parent.append(row);
   row.append(col);
@@ -48,7 +65,7 @@ const EnterCode = (update) => {
           console.log(userData.code);
         }
       }, 'json' )
-    }, 5000);
+    }, 21000);
 
   return parent;
 }

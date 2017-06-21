@@ -39,10 +39,6 @@ const userData = {
 
 
 $(_ => {
-  $.get( "api", function(data) {
-    state.jsonlist =  data;
-  }, "json");
-
   const root = $('#root');
   render(root);
 })
