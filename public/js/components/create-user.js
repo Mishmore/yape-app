@@ -59,28 +59,45 @@ const CreateUser = (update) => {
   password.on('keyup', (e) => {
     validateFields();
   });
-/*
-!(/[A-Za-z]+@[a-z]+\.[a-z]+/.test(email))
- !(/.{6,30}/.test(pass)))
-*/
 
-  parent.append(row);
-  row.append(col);
-  col.append(img);
-  col.append(title);
-  col.append(p);
-  col.append(form);
-  form.append(field1);
-  field1.append(avatar);
-  field1.append(nombre);
-  form.append(field2);
-  field2.append(mail);
-  field2.append(email);
-  form.append(field3);
-  field3.append(lock);
-  field3.append(password);
-  field3.append(recomendation);
-  form.append(btnCreate);
+  btnCreate.on('click', (e) => {
+    const username = inputNum.val();
+    $.post( 'api/createUser', {
+      phone: userData.phone,
+      name: nombre.val(),
+      email: email.val(),
+      password: password.val()
+     },
+      function(response){
+        if (response.data == null) {
+          console.log('Hubo un error en el registro');
+        } else {
+          userData.name = response.data.name;
+          userData.email = response.data.email;
+          userData.password = response.data.password;
+          state.selectedScreen = 'success';
+          update();
+        }
+      }, 'json' )
+    });
 
-  return parent;
+    parent.append(row);
+    row.append(col);
+    col.append(img);
+    col.append(title);
+    col.append(p);
+    col.append(form);
+    form.append(field1);
+    field1.append(avatar);
+    field1.append(nombre);
+    form.append(field2);
+    field2.append(mail);
+    field2.append(email);
+    form.append(field3);
+    field3.append(lock);
+    field3.append(password);
+    field3.append(recomendation);
+    form.append(btnCreate);
+
+    return parent;
 }

@@ -16,6 +16,9 @@ const render = (root) => {
   if (state.selectedScreen == 'createUser') {
     wrapper.append(CreateUser(_ => render(root)));
   }
+  if (state.selectedScreen == 'success') {
+    wrapper.append(Success(_ => render(root)));
+  }
 }
 
 const state = {
