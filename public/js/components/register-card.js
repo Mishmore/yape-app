@@ -43,7 +43,7 @@ const RegisterCard = (update) => {
   });
 
   btnContinuar.on('click', (e) => {
-    state.selectedScreen = "sendCard";
+    state.selectedScreen = "SendCard";
     update();
   })
 
