@@ -22,9 +22,9 @@ const CreateUser = (update) => {
   btnCreate.prop('disabled', true);
 
   const validateFields = () => {
-    if( (/.{6}$/.test(password.val())) && (/[A-Za-z]+@[a-z]+\.[a-z]+/.test(email.val())) && (nombre.val().length != 0) ) {
+    if( (/^\d{6}$/.test(password.val())) && (/[A-Za-z]+@[a-z]+\.[a-z]+/.test(email.val())) && (nombre.val().length != 0) ) {
       btnCreate.prop('disabled', false);
-      console.log((/.{6}/.test(password.val())));
+      console.log((/^\d{6}$/.test(password.val())));
     } else {
       btnCreate.prop('disabled', true);
     }
@@ -38,6 +38,15 @@ const CreateUser = (update) => {
       return false;
     }
   });
+
+  password.on('keypress', (event) => {
+    const charCode = event.keyCode;
+    if ((charCode >= 48 && charCode <= 57) || (charCode >= 96 && charCode <= 105)) {
+      return true;
+    } else {
+      return false;
+    }
+  })
 
   nombre.on('keyup', (e) => {
     validateFields();
