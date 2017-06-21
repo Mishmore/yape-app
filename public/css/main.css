@@ -107,7 +107,15 @@ strong {
   top: 8px;
 }
 
-input[type="number"] {
+.register .form img {
+  width: 25px;
+  object-fit: contain;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="email"]
+input[type="password"] {
   background-color: transparent;
   border: none;
   border-bottom: 1px #8f8f8f solid;
@@ -115,7 +123,10 @@ input[type="number"] {
   margin-bottom: 15px;
 }
 
-input[type=number]:focus:not([readonly]) {
+input[type="number"]:focus:not([readonly]),
+input[type="text"]:focus:not([readonly],
+input[type="email"]:focus:not([readonly],
+input[type="password"]:focus:not([readonly],{
   box-shadow: none;
   border-bottom: 1px #fbd43b solid;
 }
