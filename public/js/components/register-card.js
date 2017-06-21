@@ -9,7 +9,7 @@ const RegisterCard = (update) => {
   const p = $('<p class="center-align">Por ahora solo aceptamos cuentas de ahorro y/o corriente en soles</p>');
   const form = $('<form onsubmit="return false" class="form relative margin-top"></form>');
   const icon = $('<img src="img/icons/card.png" class="field-icon">');
-  const inputCode = $('<input type="number" class="center-align">');
+  const inputCard = $('<input type="number" class="center-align">');
   const scanDiv = $('<div></div>');
   const scan = $('<img src="img/icons/scan.png">');
   const scantxt = $('<p class="center-align light-turquoise">Escanear tarjeta</p>');
@@ -19,20 +19,24 @@ const RegisterCard = (update) => {
   const btnContinuar = $('<button type="submit" class="btn margin-auto yellow margin-top">CONTINUAR</button>');
   btnContinuar.prop('disabled', true);
 
-  const validateDate = () => {
-    if( inputMonth.val() <= 12 && inputMonth.val() >=1 && inputYear.val() >=17 && inputYear.val() <= 24) {
+  const validateFields = () => {
+    if( inputMonth.val() <= 12 && inputMonth.val() >=1 && inputYear.val() >=17 && inputYear.val() <= 24 && inputCard.val().length == 16) {
       btnContinuar.prop('disabled', false);
     } else {
       btnContinuar.prop('disabled', true);
     }
   }
 
+  inputCard.on('keyup', (e) => {
+    validateFields();
+  });
+
   inputMonth.on('keyup', (e) => {
-    validateDate();
+    validateFields();
   });
 
   inputYear.on('keyup', (e) => {
-    validateDate();
+    validateFields();
   });
 
   parent.append(row);
@@ -42,7 +46,7 @@ const RegisterCard = (update) => {
   col.append(p);
   col.append(form);
   form.append(icon);
-  form.append(inputCode);
+  form.append(inputCard);
   form.append(scanDiv);
   scanDiv.append(scan);
   scanDiv.append(scantxt);
