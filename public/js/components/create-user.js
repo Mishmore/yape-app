@@ -7,7 +7,7 @@ const CreateUser = (update) => {
   const img = $('<img src="img/icons/message.png" alt="phone" class="big-icon margin-auto">');
   const title = $('<h6 class="center-align font-500">Crea tu usuario Yape</h6>');
   const p = $('<p class="center-align">Ingresa un nombre, email y clave de usuario</p>');
-  const form = $('<form onsubmit="return false" class="form relative margin-top"></form>');
+  const form = $('<form onsubmit="return false" class="form relative"></form>');
   const field1 = $('<div class="relative"></div>');
   const avatar = $('<img src="img/icons/user.png" class="field-icon">');
   const nombre = $('<input type="text" class="center-align" placeholder="Nombre">');

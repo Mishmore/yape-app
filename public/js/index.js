@@ -19,6 +19,9 @@ const render = (root) => {
   if (state.selectedScreen == 'success') {
     wrapper.append(Success(_ => render(root)));
   }
+  if (state.selectedScreen == 'registerCard') {
+    wrapper.append(RegisterCard(_ => render(root)));
+  }
 }
 
 const state = {
