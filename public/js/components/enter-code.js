@@ -16,10 +16,6 @@ const EnterCode = (update) => {
   let sec = 21;
   const timer = $('<small id="time">'+ sec +'</small>');
 
-  $(_ => {
-
-  });
-
   const intervalTimer = setInterval(function() {
     countdown();
   }, 1000);
@@ -28,9 +24,28 @@ const EnterCode = (update) => {
     $("#time").text(sec);
     sec--;
     if (sec < 0) {
+      $.post( 'api/resendCode', {
+        phone: userData.phone,
+       },
+        function(response){
+          if (response.data == null) {
+            console.log('Hubo un error en el registro');
+          } else {
+            userData.code = response.data;
+            console.log(userData.code);
+          }
+        }, 'json' )
       sec = 21;
     }
   }
+
+  inputCode.on('keyup', (e) => {
+    if (inputCode.val() == userData.code) {
+      clearInterval(intervalTimer);
+      state.selectedScreen = 'createUser';
+      update();
+    }
+  });
 
   parent.append(row);
   row.append(col);
@@ -44,28 +59,6 @@ const EnterCode = (update) => {
   timeDiv.append(subtext);
   timeDiv.append(clock);
   timeDiv.append(timer);
-
-  inputCode.on('keyup', (e) => {
-    if (inputCode.val() == userData.code) {
-      clearInterval(resend);
-      state.selectedScreen = 'createUser';
-      update();
-    }
-  });
-
-  const resend = setInterval(function() {
-    $.post( 'api/resendCode', {
-      phone: userData.phone,
-     },
-      function(response){
-        if (response.data == null) {
-          console.log('Hubo un error en el registro');
-        } else {
-          userData.code = response.data;
-          console.log(userData.code);
-        }
-      }, 'json' )
-    }, 21000);
 
   return parent;
 }
