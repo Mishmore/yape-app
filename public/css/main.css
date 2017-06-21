@@ -14,25 +14,39 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small, button{
   font-family: 'Roboto' !important;
 }
 
+h6 {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.btn {
+  box-shadow: none;
+}
+
 .white-text {
   color: #fff;
 }
 
-.font-600 {
-  font-weight: 600;
+.margin-auto {
+  display: block;
+  margin: auto;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+.big-icon {
+  width: 100px;
 }
 
 p,
 .grey-soft-text {
   color: #8f8f8f;
-  font-size: 1.5rem;
 }
 
 
 
-.welcome .btn {
-  box-shadow: none;
-}
 
 .full-width {
   width: 100%;
