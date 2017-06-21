@@ -4,29 +4,32 @@ const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
   root.append(wrapper);
-  if (state.selectedScreen == null) {
-    wrapper.append(Welcome(_ => render(root)));
+
+  switch (state.selectedScreen) {
+    case null:
+        wrapper.append(Welcome(_ => render(root)));
+        break;
+    case 'RegisterNum':
+        wrapper.append(RegisterNum(_ => render(root)));
+        break;
+    case 'EnterCode':
+        wrapper.append(EnterCode(_ => render(root)));
+        break;
+    case 'CreateUser':
+        wrapper.append(CreateUser(_ => render(root)));
+        break;
+    case 'Success':
+        wrapper.append(Success(_ => render(root)));
+        break;
+    case 'RegisterCard':
+        wrapper.append(RegisterCard(_ => render(root)));
+        break;
   }
-  if (state.selectedScreen == 'regNumber') {
-    wrapper.append(RegisterNum(_ => render(root)));
-  }
-  if (state.selectedScreen == 'enterCode') {
-    wrapper.append(EnterCode(_ => render(root)));
-  }
-  if (state.selectedScreen == 'createUser') {
-    wrapper.append(CreateUser(_ => render(root)));
-  }
-  if (state.selectedScreen == 'success') {
-    wrapper.append(Success(_ => render(root)));
-  }
-  if (state.selectedScreen == 'registerCard') {
-    wrapper.append(RegisterCard(_ => render(root)));
-  }
+
 }
 
 const state = {
-  jsonlist: null,
-  selectedScreen : null,
+  selectedScreen : null
 }
 
 const userData = {
@@ -39,7 +42,6 @@ const userData = {
   cardExp: null,
   cardPassword: null
 }
-
 
 $(_ => {
   const root = $('#root');

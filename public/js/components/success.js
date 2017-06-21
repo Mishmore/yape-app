@@ -14,7 +14,7 @@ const Success = (update) => {
   col.append(title);
   col.append(subtitle);
 
-  state.selectedScreen = 'registerCard';
+  state.selectedScreen = 'RegisterCard';
 
   const nextScreen = setTimeout(function() {
     update();

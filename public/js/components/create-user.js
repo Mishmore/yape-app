@@ -76,7 +76,7 @@ const CreateUser = (update) => {
           userData.name = response.data.name;
           userData.email = response.data.email;
           userData.password = response.data.password;
-          state.selectedScreen = 'success';
+          state.selectedScreen = 'Success';
           update();
         }
       }, 'json' )

@@ -41,7 +41,7 @@ const RegisterNum = (update) => {
         } else {
           userData.phone = response.data.phone;
           userData.code = response.data.code;
-          state.selectedScreen = 'enterCode';
+          state.selectedScreen = 'EnterCode';
           update();
         }
       }, 'json' )

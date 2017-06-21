@@ -37,7 +37,7 @@ const Welcome = (update) => {
   parent.append(btn);
 
   btn.on('click', (e) => {
-    state.selectedScreen = 'regNumber';
+    state.selectedScreen = 'RegisterNum';
     update();
   })
   return parent;

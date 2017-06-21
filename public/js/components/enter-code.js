@@ -42,7 +42,7 @@ const EnterCode = (update) => {
   inputCode.on('keyup', (e) => {
     if (inputCode.val() == userData.code) {
       clearInterval(intervalTimer);
-      state.selectedScreen = 'createUser';
+      state.selectedScreen = 'CreateUser';
       update();
     }
   });
