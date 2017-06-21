@@ -8,7 +8,7 @@ const RegisterNum = (update) => {
   const title = $('<h6 class="center-align font-500">Para comenzar validemos tu número</h6>');
   const p = $('<p class="center-align">Recibirás un SMS con un código de validación</p>');
   const form = $('<form onsubmit="return false" class="form relative margin-top"></form>');
-  const icon = $('<img src="img/icons/phoneandnumber.png">');
+  const icon = $('<img src="img/icons/phoneandnumber.png"class="field-icon">');
   const inputNum = $('<input type="number" class="center-align">');
   const terms = $('<div></div>');
   const checkbox = $('<input type="checkbox" class="filled-in" id="agree">');

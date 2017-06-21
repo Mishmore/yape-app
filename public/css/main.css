@@ -108,7 +108,7 @@ strong {
   background-color: #f44336;
 }
 
-.form img {
+.field-icon {
   position: absolute;
   height: 25px;
   left: 15px;
@@ -118,6 +118,11 @@ strong {
 .create-user .form img {
   width: 25px;
   object-fit: contain;
+}
+
+.regcard .field-icon {
+  height: 20px;
+  top: 13px;
 }
 
 input[type="number"],

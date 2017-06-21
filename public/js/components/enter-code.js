@@ -8,7 +8,7 @@ const EnterCode = (update) => {
   const title = $('<h6 class="center-align font-500">Ahora ingresa tu código</h6>');
   const p = $('<p class="center-align">Enviamos un SMS con el código de validación al número <strong>'+ userData.phone +'</strong> </p>');
   const form = $('<form onsubmit="return false" class="form relative margin-top"></form>');
-  const icon = $('<img src="img/icons/lock.png">');
+  const icon = $('<img src="img/icons/lock.png" class="field-icon">');
   const inputCode = $('<input type="number" class="center-align" placeholder="- - - - -" >');
   const timeDiv = $('<div class="margin-auto timer-div"></div>');
   const subtext = $('<small>Reintentar en </small>');
