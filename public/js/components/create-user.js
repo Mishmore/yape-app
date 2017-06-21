@@ -41,10 +41,12 @@ const CreateUser = (update) => {
 
   password.on('keypress', (event) => {
     const charCode = event.keyCode;
-    if ((charCode >= 48 && charCode <= 57) || (charCode >= 96 && charCode <= 105)) {
-      return true;
+    if (charCode != 8) {
+        if ((charCode < 48 || charCode > 57) && charCode!= 46) {
+        	return false;
+        }
     } else {
-      return false;
+      return true;
     }
   })
 
