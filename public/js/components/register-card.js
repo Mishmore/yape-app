@@ -42,6 +42,11 @@ const RegisterCard = (update) => {
     validateFields();
   });
 
+  btnContinuar.on('click', (e) => {
+    state.selectedScreen = "sendCard";
+    update();
+  })
+
   parent.append(row);
   row.append(col);
   col.append(img);
