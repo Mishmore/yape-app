@@ -9,6 +9,7 @@ Morado - Entrada de números : #49233b
 Morado light : #451e36
 Morado dark : #38052a
 */
+
 body,h1,h2,h3,h4,h5,h6,span,input,label,small, button{
   font-family: 'Roboto' !important;
 }
@@ -27,9 +28,14 @@ p,
   font-size: 1.5rem;
 }
 
-.welcome p {
-  width: 90%;
-  margin: auto;
+
+
+.welcome .btn {
+  box-shadow: none;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .grey-dark-text {
@@ -37,20 +43,20 @@ p,
 }
 
 .yellow {
-  background-color: #fbd43b;
+  background-color: #fbd43b !important;
 }
 
 .carousel-slider {
-  transform: translateY(15%);
-  height: 75vh !important;
+  transform: translateY(20%);
+  height: 62vh !important;
   width: 80%;
   margin: auto;
+  margin-bottom: 75px;
 }
 
 .carousel .carousel-item>img {
-    width: 75%;
+  width: 75%;
 }
-
 .carousel .indicators .indicator-item.active {
-    background-color: #f44336;
+  background-color: #f44336;
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 const Welcome = (update) => {
-  const parent = $('<div class="container"></div>');
+  const parent = $('<div class="container welcome"></div>');
   const carousel = $('<div class="carousel carousel-slider center" data-indicators="true">');
   const img1 = $('<img src="img/icons/icon-people.png" alt="people">');
   const item1 = $('<div class="carousel-item" href="#one!">');
@@ -18,7 +18,7 @@ const Welcome = (update) => {
   const title3 = $('<h5 class="text-center font-600">Paga a tus amigos</h5>');
   const p3 = $('<p class="text-center">Paga a quien quieras desde donde quieras, sin usar efectivo.</p>');
 
-  const btn = $('<button class="btn btn-block yellow white-text">REGISTRAME</button>');
+  const btn = $('<button class="btn full-width yellow white-text">REGISTRAME</button>');
 
   parent.append(carousel);
   carousel.append(item1);
