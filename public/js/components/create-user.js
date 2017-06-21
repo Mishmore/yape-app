@@ -61,7 +61,6 @@ const CreateUser = (update) => {
   });
 
   btnCreate.on('click', (e) => {
-    const username = inputNum.val();
     $.post( 'api/createUser', {
       phone: userData.phone,
       name: nombre.val(),

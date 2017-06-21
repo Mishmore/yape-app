@@ -30,14 +30,25 @@ const EnterCode = (update) => {
 
   inputCode.on('keyup', (e) => {
     if (inputCode.val() == userData.code) {
+      clearInterval(resend);
       state.selectedScreen = 'createUser';
       update();
     }
   });
-/*
+
   const resend = setInterval(function() {
-    alert("Hello");
-  }, 3000);
-*/
+    $.post( 'api/resendCode', {
+      phone: userData.phone,
+     },
+      function(response){
+        if (response.data == null) {
+          console.log('Hubo un error en el registro');
+        } else {
+          userData.code = response.data;
+          console.log(userData.code);
+        }
+      }, 'json' )
+    }, 5000);
+
   return parent;
 }
