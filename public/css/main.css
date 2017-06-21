@@ -23,13 +23,26 @@ h6 {
   box-shadow: none;
 }
 
+.btn:disabled{
+  color: #fff !important;
+}
+
 .white-text {
   color: #fff;
 }
 
+.margin-top {
+  margin-top: 60px;
+}
+
+.relative {
+  position: relative;
+}
+
 .margin-auto {
   display: block;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .font-500 {
@@ -45,8 +58,18 @@ p,
   color: #8f8f8f;
 }
 
+input[type="text"],
+input[type="number"] {
+  color: #49233b;
+}
 
+[type="checkbox"].filled-in:not(:checked)+label:after {
+  border-color: #DFDFDF;
+}
 
+.light-turquoise {
+  color: #00c3a3;
+}
 
 .full-width {
   width: 100%;
@@ -73,4 +96,29 @@ p,
 }
 .carousel .indicators .indicator-item.active {
   background-color: #f44336;
+}
+
+.form img {
+  position: absolute;
+  width: 60px;
+  left: 15px;
+  top: 8px;
+}
+
+input[type="number"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px #8f8f8f solid;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+input[type=number]:focus:not([readonly]) {
+  box-shadow: none;
+  border-bottom: 1px #fbd43b solid;
+}
+
+[type="checkbox"].filled-in:checked+label:after {
+  border: 2px solid #00c3a3;
+  background-color: #00c3a3;
 }
