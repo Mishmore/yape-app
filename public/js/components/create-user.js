@@ -16,7 +16,7 @@ const CreateUser = (update) => {
   const email = $('<input type="email" class="center-align" placeholder="correo@ejemplo.com">');
   const field3 = $('<div class="relative"></div>');
   const lock = $('<img src="img/icons/lock.png" class="field-icon">');
-  const password = $('<input type="password" class="center-align" placeholder="Ingresa clave de 6 dígitos">');
+  const password = $('<input type="password" class="center-align" placeholder="Ingresa clave de 6 dígitos" maxLength="6">');
   const recomendation = $('<small class="center-align">Cuida esta clave como oro, ya que es tu acceso a Yape.</small>');
   const btnCreate = $('<button type="submit" name="button" class="btn margin-auto yellow margin-top">CREAR CUENTA</button>');
   btnCreate.prop('disabled', true);
