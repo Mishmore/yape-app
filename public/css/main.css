@@ -17,6 +17,10 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small, button{
   color: #fff;
 }
 
+.font-600 {
+  font-weight: 600;
+}
+
 p,
 .grey-soft-text {
   color: #8f8f8f;
@@ -37,5 +41,16 @@ p,
 }
 
 .carousel-slider {
-    height: 400px !important;
+  transform: translateY(15%);
+  height: 75vh !important;
+  width: 80%;
+  margin: auto;
+}
+
+.carousel .carousel-item>img {
+    width: 75%;
+}
+
+.carousel .indicators .indicator-item.active {
+    background-color: #f44336;
 }
