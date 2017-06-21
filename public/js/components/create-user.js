@@ -21,23 +21,39 @@ const CreateUser = (update) => {
   const btnCreate = $('<button type="submit" name="button" class="btn margin-auto yellow margin-top">CREAR CUENTA</button>');
   btnCreate.prop('disabled', true);
 
-  const validateNum = () => {
-    if( (/^\d{9}$/.test(inputNum.val())) && (($('#agree').prop('checked')) == true) ) {
-      btnContinuar.prop('disabled', false);
+  const validateFields = () => {
+    if( (/.{6}$/.test(password.val())) && (/[A-Za-z]+@[a-z]+\.[a-z]+/.test(email.val())) && (nombre.val().length != 0) ) {
+      btnCreate.prop('disabled', false);
+      console.log((/.{6}/.test(password.val())));
     } else {
-      btnContinuar.prop('disabled', true);
+      btnCreate.prop('disabled', true);
     }
   }
 
-    nombre.on('keypress', (event) => {
-      const charCode = event.keyCode;
-      if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8) {
-        return true;
-      }
-      else {
-        return false;
-      }
-    });
+  nombre.on('keypress', (event) => {
+    const charCode = event.keyCode;
+    if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 || charCode == 32) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
+  nombre.on('keyup', (e) => {
+    validateFields();
+  });
+
+  email.on('keyup', (e) => {
+    validateFields();
+  });
+
+  password.on('keyup', (e) => {
+    validateFields();
+  });
+/*
+!(/[A-Za-z]+@[a-z]+\.[a-z]+/.test(email))
+ !(/.{6,30}/.test(pass)))
+*/
 
   parent.append(row);
   row.append(col);
