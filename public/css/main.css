@@ -54,12 +54,14 @@ h6 {
 }
 
 p,
+small,
 .grey-soft-text {
   color: #8f8f8f;
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+strong {
   color: #49233b;
 }
 
@@ -100,7 +102,7 @@ input[type="number"] {
 
 .form img {
   position: absolute;
-  width: 60px;
+  height: 25px;
   left: 15px;
   top: 8px;
 }
@@ -121,4 +123,17 @@ input[type=number]:focus:not([readonly]) {
 [type="checkbox"].filled-in:checked+label:after {
   border: 2px solid #00c3a3;
   background-color: #00c3a3;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.clock {
+  width: 17px;
+  transform: translateY(25%);
+}
+
+.timer-div {
+  width: 33%;
 }

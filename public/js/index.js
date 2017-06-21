@@ -42,6 +42,4 @@ $(_ => {
 
   const root = $('#root');
   render(root);
-
-  //$('.carousel.carousel-slider').carousel({full_width: true});
 })
