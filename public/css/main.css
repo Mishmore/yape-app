@@ -107,7 +107,7 @@ strong {
   top: 8px;
 }
 
-.register .form img {
+.create-user .form img {
   width: 25px;
   object-fit: contain;
 }
@@ -123,18 +123,6 @@ input[type="password"] {
   margin-bottom: 15px;
 }
 
-input[type="number"]:focus:not([readonly]),
-input[type="text"]:focus:not([readonly],
-input[type="email"]:focus:not([readonly],
-input[type="password"]:focus:not([readonly],{
-  box-shadow: none;
-  border-bottom: 1px #fbd43b solid;
-}
-
-[type="checkbox"].filled-in:checked+label:after {
-  border: 2px solid #00c3a3;
-  background-color: #00c3a3;
-}
 
 .inline-block {
   display: inline-block;
@@ -147,4 +135,18 @@ input[type="password"]:focus:not([readonly],{
 
 .timer-div {
   width: 33%;
+}
+
+input[type="checkbox"].filled-in:checked+label:after {
+  border: 2px solid #00c3a3;
+  background-color: #00c3a3;
+}
+
+input[type="number"]:focus:not([readonly]),
+input[type="text"]:focus:not([readonly]),
+input[type="email"]:focus:not([readonly]),
+input[type="password"]:focus:not([readonly])
+{
+  box-shadow: none;
+  border-bottom: 1px #fbd43b solid;
 }

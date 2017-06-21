@@ -1,7 +1,7 @@
 'use strict';
 
 const EnterCode = (update) => {
-  const parent = $('<div class="container register"></div>');
+  const parent = $('<div class="container code"></div>');
   const row = $('<div class="row margin-top"></div>');
   const col = $('<div class="col s12"></div>');
   const img = $('<img src="img/icons/message.png" alt="phone" class="big-icon margin-auto">');

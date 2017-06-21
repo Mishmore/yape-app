@@ -1,7 +1,7 @@
 'use strict';
 
 const CreateUser = (update) => {
-  const parent = $('<div class="container register"></div>');
+  const parent = $('<div class="container create-user"></div>');
   const row = $('<div class="row margin-top"></div>');
   const col = $('<div class="col s12"></div>');
   const img = $('<img src="img/icons/message.png" alt="phone" class="big-icon margin-auto">');
@@ -19,6 +19,25 @@ const CreateUser = (update) => {
   const password = $('<input type="password" class="center-align" placeholder="Ingresa clave de 6 dígitos">');
   const recomendation = $('<small class="center-align">Cuida esta clave como oro, ya que es tu acceso a Yape.</small>');
   const btnCreate = $('<button type="submit" name="button" class="btn margin-auto yellow margin-top">CREAR CUENTA</button>');
+  btnCreate.prop('disabled', true);
+
+  const validateNum = () => {
+    if( (/^\d{9}$/.test(inputNum.val())) && (($('#agree').prop('checked')) == true) ) {
+      btnContinuar.prop('disabled', false);
+    } else {
+      btnContinuar.prop('disabled', true);
+    }
+  }
+
+    nombre.on('keypress', (event) => {
+      const charCode = event.keyCode;
+      if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    });
 
   parent.append(row);
   row.append(col);
