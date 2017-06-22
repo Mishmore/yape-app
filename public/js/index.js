@@ -35,7 +35,7 @@ const render = (root) => {
 }
 
 const state = {
-  selectedScreen : 'Account'
+  selectedScreen : null
 }
 
 const userData = {

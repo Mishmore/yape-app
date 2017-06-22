@@ -15,12 +15,17 @@ const SendCard = (update) => {
   btnRegistrar.prop('disabled', true);
 
   const validateFields = () => {
-    if( inputPass.val() <= 12 ) {
+    if( inputPass.val().length == 4 ) {
       btnRegistrar.prop('disabled', false);
+      btnRegistrar.focus();
     } else {
       btnRegistrar.prop('disabled', true);
     }
   }
+
+  inputPass.on('keyup', (e) => {
+    validateFields();
+  })
 
   btnRegistrar.on('click', (e) => {
     $.post( 'api/registerCard', {

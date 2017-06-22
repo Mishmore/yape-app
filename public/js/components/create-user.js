@@ -24,7 +24,7 @@ const CreateUser = (update) => {
   const validateFields = () => {
     if( (/^\d{6}$/.test(password.val())) && (/[A-Za-z]+@[a-z]+\.[a-z]+/.test(email.val())) && (nombre.val().length != 0) ) {
       btnCreate.prop('disabled', false);
-      console.log((/^\d{6}$/.test(password.val())));
+      btnCreate.focus();
     } else {
       btnCreate.prop('disabled', true);
     }

@@ -26,6 +26,7 @@ const RegisterCard = (update) => {
   const validateFields = () => {
     if( inputMonth.val() <= 12 && inputMonth.val() >=1 && inputYear.val() >=17 && inputYear.val() <= 24 && inputCard.val().length == 16) {
       btnContinuar.prop('disabled', false);
+      btnContinuar.focus();
     } else {
       btnContinuar.prop('disabled', true);
     }
@@ -33,10 +34,16 @@ const RegisterCard = (update) => {
 
   inputCard.on('keyup', (e) => {
     validateFields();
+    if (inputCard.val().length == 16) {
+      inputMonth.focus();
+    }
   });
 
   inputMonth.on('keyup', (e) => {
     validateFields();
+    if (inputMonth.val().length == 2) {
+      inputYear.focus();
+    }
   });
 
   inputYear.on('keyup', (e) => {

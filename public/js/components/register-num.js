@@ -19,6 +19,7 @@ const RegisterNum = (update) => {
   const validateNum = () => {
     if( (/^\d{9}$/.test(inputNum.val())) && (($('#agree').prop('checked')) == true) ) {
       btnContinuar.prop('disabled', false);
+      btnContinuar.focus();
     } else {
       btnContinuar.prop('disabled', true);
     }
