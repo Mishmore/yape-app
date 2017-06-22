@@ -34,6 +34,7 @@ const RegisterCard = (update) => {
 
   inputCard.on('keyup', (e) => {
     validateFields();
+    limitCharacters(inputCard, 16);
     if (inputCard.val().length == 16) {
       inputMonth.focus();
     }
@@ -41,12 +42,14 @@ const RegisterCard = (update) => {
 
   inputMonth.on('keyup', (e) => {
     validateFields();
+    limitCharacters(inputMonth, 2);
     if (inputMonth.val().length == 2) {
       inputYear.focus();
     }
   });
 
   inputYear.on('keyup', (e) => {
+    limitCharacters(inputYear, 2);
     validateFields();
   });
 
