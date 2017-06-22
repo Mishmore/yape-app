@@ -10,7 +10,7 @@ const RegisterCard = (update) => {
   const form = $('<form onsubmit="return false" class="form relative margin-top"></form>');
   const icon = $('<img src="img/icons/card.png" class="field-icon">');
   const inputCard = $('<input type="number" class="center-align">');
-  const scanDiv = $('<div class="scan-div"></div>');
+  const scanDiv = $('<div class="turquoise-div"></div>');
   const scan = $('<img src="img/icons/scan.png" width="25px">');
   const scantxt = $('<p class="center-align light-turquoise inline-block">Escanear tarjeta</p>');
   const venceDiv = $('<div class="vence-div"></div>');
@@ -20,7 +20,7 @@ const RegisterCard = (update) => {
   const slash = $('<span>/</span>');
   const inputYear = $('<input type="number" min="17" max="24" placeholder="Año" class="small-input center-align">');
   const btnContinuar = $('<button type="submit" class="btn margin-auto yellow margin-top">CONTINUAR</button>');
-  const ask = $('<img src="img/icons/question.png" class="ask-icon">');
+  const ask = $('<img src="img/icons/question.png" class="top-right-icon">');
   btnContinuar.prop('disabled', true);
 
   const validateFields = () => {

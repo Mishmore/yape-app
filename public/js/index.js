@@ -35,7 +35,7 @@ const render = (root) => {
 }
 
 const state = {
-  selectedScreen : 'SendCard'
+  selectedScreen : 'Account'
 }
 
 const userData = {

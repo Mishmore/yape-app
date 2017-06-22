@@ -11,11 +11,11 @@ const SendCard = (update) => {
   const icon = $('<img src="img/icons/lock.png" class="field-icon">');
   const inputPass = $('<input type="password" class="center-align" placeholder="- - - - -" maxLength="4" >');
   const btnRegistrar = $('<button type="submit" class="btn margin-auto yellow margin-top">REGISTRAR</button>');
-  const ask = $('<img src="img/icons/question.png" class="ask-icon">');
+  const ask = $('<img src="img/icons/question.png" class="top-right-icon">');
   btnRegistrar.prop('disabled', true);
 
   const validateFields = () => {
-    if( inputMonth.val() <= 12 && inputMonth.val() >=1 && inputYear.val() >=17 && inputYear.val() <= 24 && inputCard.val().length == 16) {
+    if( inputPass.val() <= 12 ) {
       btnRegistrar.prop('disabled', false);
     } else {
       btnRegistrar.prop('disabled', true);
@@ -24,11 +24,11 @@ const SendCard = (update) => {
 
   btnRegistrar.on('click', (e) => {
     $.post( 'api/registerCard', {
-      phone : userData.phone;
-      cardNumber : state.cardNum;
-      cardMonth : state.cardMonth;
-      cardYear : state.cardYear;
-      cardPassword : inputPass.val();
+      phone : userData.phone,
+      cardNumber : state.cardNum,
+      cardMonth : state.cardMonth,
+      cardYear : state.cardYear,
+      cardPassword : inputPass.val()
      },
       function(response){
         if (response.data == null) {
