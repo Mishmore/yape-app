@@ -12,19 +12,19 @@ const Account = (update) => {
   const eye = $('<img src="img/icons/eye.png" width="25px">');
   const row2 = $('<div class="row dark-purple"></div>');
   const col2 = $('<div class="col s12 ultimos-mov"></div>');
-  const ultMov = $('<h6 class="center-align font-500 white-text inline-block">ÚLTIMOS MOVIMIENTOS</h6>');
+  const ultMov = $('<p class="center-align font-500 white-text inline-block">ÚLTIMOS MOVIMIENTOS</p>');
   const arrow = $('<img src="img/icons/right-arrow-circular-button.png" width="25px">');
   const img = $('<img src="img/icons/icon.png" class="col s5">');
   const divTxt = $('<div class="col s7"></div>');
   const row2Title = $('<p class="white-text">¿Aún no realizas tu primer pago?</p>');
   const row2SubTitle = $('<p class="white-text">Es rápido y sencillo</p>');
-  const col12 = $('<div class="col s12"></div>');
+  const col12 = $('<div class="col s12 call-to-action"></div>');
   const enviar = $('<div class="col s4"></div>');
   const imgEnviar =  $('<img src="img/icons/send.png" class="responsive-img">');
-  const enviarTxt = $('<p class="white-text">Enviar pago</p>');
+  const enviarTxt = $('<p class="white-text uppercase">Enviar pago</p>');
   const recibir = $('<div class="col s4"></div>');
   const imgRecibir =  $('<img src="img/icons/code-qr.png" class="responsive-img">');
-  const recibirTxt = $('<p class="white-text">Recibir pago</p>');
+  const recibirTxt = $('<p class="white-text uppercase">Recibir pago</p>');
 
   parent.append(row);
   row.append(col);

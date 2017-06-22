@@ -22,6 +22,10 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small, button{
   background-color: #38052a;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 h6 {
   font-size: 1.3rem;
   line-height: 1.7;
@@ -222,6 +226,7 @@ input[type="password"]:focus:not([readonly])
   height: 35vh;
   display: flex;
   align-items: flex-end;
+  padding-bottom: 10px;
 }
 
 .code .dark-purple {
@@ -238,4 +243,14 @@ input[type="password"]:focus:not([readonly])
 
 .ultimos-mov p {
   margin-bottom: .7em;
+}
+
+.call-to-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.call-to-action .col.s4 {
+  margin: 0;
 }
