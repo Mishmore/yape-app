@@ -27,9 +27,12 @@ const RegisterNum = (update) => {
 
   inputNum.on('keyup', (e) => {
     validateNum();
+    if (inputNum.val().length == 9) {
+      checkbox.focus();
+    }
   });
 
-  checkbox.on('click', (e) => {
+  checkbox.on('click focus', (e) => {
     validateNum();
   });
 

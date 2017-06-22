@@ -24,7 +24,7 @@ const RegisterCard = (update) => {
   btnContinuar.prop('disabled', true);
 
   const validateFields = () => {
-    if( inputMonth.val() <= 12 && inputMonth.val() >=1 && inputYear.val() >=17 && inputYear.val() <= 24 && inputCard.val().length == 16) {
+    if( inputMonth.val() <= 12 && inputMonth.val() >=1 && inputMonth.val().length ==2 && inputYear.val() >=17 && inputYear.val() <= 24 && inputCard.val().length == 16) {
       btnContinuar.prop('disabled', false);
       btnContinuar.focus();
     } else {
