@@ -5,7 +5,7 @@ Yape es la nueva aplicación del Banco de Crédito del Perú, con la que tendrá
 ## Requerimientos y funcionalidades
 + Pantalla 1:
   - Debe tener un carrousel de íconos y un botón de registro
- + Pantalla 2:
++ Pantalla 2:
   - Debe poder ingresar un teléfono y poder aceptar los términos y condiciones
   - El botón de continuar sólo se activa cuando un teléfono es ingresado y los términos aceptados
   - Cuando se hace clic en continuar, el sistema debe enviar un request al API para registrar el teléfono y generar el código
