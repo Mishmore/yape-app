@@ -51,9 +51,9 @@ const RegisterCard = (update) => {
   });
 
   btnContinuar.on('click', (e) => {
-    state.cardNum = inputCard.val();
-    state.cardMonth = inputMonth.val();
-    state.cardYear = inputYear.val();
+    userData.cardNum = inputCard.val();
+    userData.cardMonth = inputMonth.val();
+    userData.cardYear = inputYear.val();
     state.selectedScreen = "SendCard";
     update();
   })

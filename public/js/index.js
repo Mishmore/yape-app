@@ -35,13 +35,13 @@ const render = (root) => {
 }
 
 const state = {
-  selectedScreen : 'Account'
+  selectedScreen : null
 }
 
 const userData = {
   phone: null,
   code: null,
-  username: null,
+  name: null,
   email: null,
   password: null,
   cardNum: null,

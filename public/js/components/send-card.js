@@ -30,14 +30,14 @@ const SendCard = (update) => {
   btnRegistrar.on('click', (e) => {
     $.post( 'api/registerCard', {
       phone : userData.phone,
-      cardNumber : state.cardNum,
-      cardMonth : state.cardMonth,
-      cardYear : state.cardYear,
+      cardNumber : userData.cardNum,
+      cardMonth : userData.cardMonth,
+      cardYear : userData.cardYear,
       cardPassword : inputPass.val()
      },
       function(response){
         if (response.data == null) {
-          console.log('Hubo un error en el registro');
+          console.log(response);
         } else {
           userData.cardPassword = response.data.cardPassword;
           state.selectedScreen = 'Account';
