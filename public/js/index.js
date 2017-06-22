@@ -24,12 +24,18 @@ const render = (root) => {
     case 'RegisterCard':
         wrapper.append(RegisterCard(_ => render(root)));
         break;
+    case 'SendCard':
+        wrapper.append(SendCard(_ => render(root)));
+        break;
+    case 'Account':
+        wrapper.append(Account(_ => render(root)));
+        break;
   }
 
 }
 
 const state = {
-  selectedScreen : null
+  selectedScreen : 'SendCard'
 }
 
 const userData = {
@@ -39,7 +45,8 @@ const userData = {
   email: null,
   password: null,
   cardNum: null,
-  cardExp: null,
+  cardMonth: null,
+  cardYear: null,
   cardPassword: null
 }
 

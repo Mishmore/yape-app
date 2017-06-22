@@ -203,3 +203,10 @@ input[type="password"]:focus:not([readonly])
 .form .scan-div p {
   margin: 0 0 0 5px;
 }
+
+.ask-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 23px;
+}

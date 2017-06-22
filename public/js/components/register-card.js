@@ -20,6 +20,7 @@ const RegisterCard = (update) => {
   const slash = $('<span>/</span>');
   const inputYear = $('<input type="number" min="17" max="24" placeholder="Año" class="small-input center-align">');
   const btnContinuar = $('<button type="submit" class="btn margin-auto yellow margin-top">CONTINUAR</button>');
+  const ask = $('<img src="img/icons/question.png" class="ask-icon">');
   btnContinuar.prop('disabled', true);
 
   const validateFields = () => {
@@ -43,6 +44,9 @@ const RegisterCard = (update) => {
   });
 
   btnContinuar.on('click', (e) => {
+    state.cardNum = inputCard.val();
+    state.cardMonth = inputMonth.val();
+    state.cardYear = inputYear.val();
     state.selectedScreen = "SendCard";
     update();
   })
@@ -65,6 +69,7 @@ const RegisterCard = (update) => {
   fieldDiv.append(slash);
   fieldDiv.append(inputYear);
   form.append(btnContinuar);
+  parent.append(ask);
 
   return parent;
 }
