@@ -29,11 +29,11 @@ Yape es la nueva aplicación del Banco de Crédito del Perú, con la que tendrá
   Sólo debe poder ingresar años futuros (del 17 al 24) 
   El botón de registro sólo se activa si todos los campos han sido ingresados
 + Pantalla 7
-  Es la pantalla final a donde se llega después del registro. Esta pantalla no tiene funcionalidad activa: sólo debe mostrarse tal cual se  ve
+  Es la pantalla final a donde se llega después del registro. Esta pantalla no tiene funcionalidad activa: sólo debe mostrarse tal cual se  ve.
   
-  ## Herramientas utilizadas
-  + Javascript
-  + HTML5
-  + CSS
-  + jQuery
+## Herramientas utilizadas
++ Javascript
++ HTML5
++ CSS
++ jQuery
 
