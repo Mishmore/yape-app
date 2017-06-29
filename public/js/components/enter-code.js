@@ -15,6 +15,8 @@ const EnterCode = (update) => {
   const clock = $('<img src="img/icons/clock.png" alt="clock" class="inline-block clock">');
   let sec = 21;
   const timer = $('<small id="time">'+ sec +'</small>');
+  const statusInfo = $('<small class="center-align bottom-info blue-text"> Código: '+ userData.code +'<small>');
+
 
   const intervalTimer = setInterval(function() {
     countdown();
@@ -32,7 +34,7 @@ const EnterCode = (update) => {
             console.log('Hubo un error en el registro');
           } else {
             userData.code = response.data;
-            console.log(userData.code);
+            statusInfo.text('Código: '+ userData.code);
           }
         }, 'json' )
       sec = 21;
@@ -40,11 +42,13 @@ const EnterCode = (update) => {
   }
 
   inputCode.on('keyup', (e) => {
+    limitCharacters(inputCode, 6);
     if (inputCode.val() == userData.code) {
       clearInterval(intervalTimer);
       state.selectedScreen = 'CreateUser';
       update();
     }
+
   });
 
   parent.append(row);
@@ -59,6 +63,7 @@ const EnterCode = (update) => {
   timeDiv.append(subtext);
   timeDiv.append(clock);
   timeDiv.append(timer);
+  col.append(statusInfo);
 
   return parent;
 }

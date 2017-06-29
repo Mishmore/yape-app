@@ -14,6 +14,7 @@ const RegisterNum = (update) => {
   const checkbox = $('<input type="checkbox" class="filled-in" id="agree">');
   const label = $('<label for="agree"> Acepto los <a href="#" class="light-turquoise">Términos y condiciones</a></label>');
   const btnContinuar = $('<button type="submit" class="btn margin-auto yellow margin-top">CONTINUAR</button>');
+  const statusInfo = $('<small class="center-align bottom-info red-text"><small>');
   btnContinuar.prop('disabled', true);
 
   const validateNum = () => {
@@ -39,7 +40,7 @@ const RegisterNum = (update) => {
     $.post( 'api/registerNumber', { phone: phone, terms: true },
       function(response){
         if (response.data == null) {
-          alert('Este usuario ya existe');
+          statusInfo.text(response.message);
         } else {
           userData.phone = response.data.phone;
           userData.code = response.data.code;
@@ -61,6 +62,7 @@ const RegisterNum = (update) => {
   terms.append(label);
   form.append(terms);
   form.append(btnContinuar);
+  col.append(statusInfo);
 
   return parent;
 }

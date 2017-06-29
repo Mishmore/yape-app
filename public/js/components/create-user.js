@@ -17,7 +17,7 @@ const CreateUser = (update) => {
   const field3 = $('<div class="relative"></div>');
   const lock = $('<img src="img/icons/lock.png" class="field-icon">');
   const password = $('<input type="password" class="center-align" placeholder="Ingresa clave de 6 dígitos" maxLength="6">');
-  const recomendation = $('<small class="center-align">Cuida esta clave como oro, ya que es tu acceso a Yape.</small>');
+  const recomendation = $('<small class="center-align bottom-info">Cuida esta clave como oro, ya que es tu acceso a Yape.</small>');
   const btnCreate = $('<button type="submit" name="button" class="btn margin-auto yellow margin-top">CREAR CUENTA</button>');
   btnCreate.prop('disabled', true);
 
@@ -41,12 +41,10 @@ const CreateUser = (update) => {
 
   password.on('keypress', (event) => {
     const charCode = event.keyCode;
-    if (charCode != 8) {
-        if ((charCode < 48 || charCode > 57) && charCode!= 46) {
-        	return false;
-        }
-    } else {
+    if (charCode == 8 || charCode == 46 || (charCode > 47 && charCode < 58) ) {
       return true;
+    } else {
+      return false;
     }
   })
 

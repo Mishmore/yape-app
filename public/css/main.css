@@ -255,3 +255,8 @@ input[type="password"]:focus:not([readonly])
 img.responsive-img {
   max-width: 60%;
 }
+
+.bottom-info {
+  display: block;
+  margin-top: 15px;
+}

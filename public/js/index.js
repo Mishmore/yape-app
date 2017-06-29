@@ -6,7 +6,7 @@ const render = (root) => {
   root.append(wrapper);
 
   switch (state.selectedScreen) {
-    case null:
+    case 'Welcome':
         wrapper.append(Welcome(_ => render(root)));
         break;
     case 'RegisterNum':
@@ -35,7 +35,7 @@ const render = (root) => {
 }
 
 const state = {
-  selectedScreen : null
+  selectedScreen : 'RegisterNum'
 }
 
 const userData = {
