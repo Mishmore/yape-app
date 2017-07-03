@@ -35,7 +35,7 @@ const render = (root) => {
 }
 
 const state = {
-  selectedScreen : 'RegisterNum'
+  selectedScreen : 'Welcome'
 }
 
 const userData = {
