@@ -96,17 +96,21 @@ strong {
 .dark-purple-text {
   color: #38052a;
 }
-
+.welcome {
+  width: 280px;
+}
 .carousel-slider {
   transform: translateY(20%);
   height: 62vh !important;
-  width: 80%;
   margin: auto;
   margin-bottom: 75px;
 }
 
 .carousel .carousel-item>img {
   width: 75%;
+}
+.carousel .indicators .indicator-item {
+  background-color: rgba(113, 113, 113, 0.52);
 }
 .carousel .indicators .indicator-item.active {
   background-color: #f44336;
